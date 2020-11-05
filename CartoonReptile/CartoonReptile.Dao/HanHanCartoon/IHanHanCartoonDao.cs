@@ -10,6 +10,6 @@ namespace CartoonReptile.Dao.HanHanCartoon
 {
     public interface IHanHanCartoonDao: IBaseDao<HanHanCartoonEntity>
     {
-
+        bool Update(HanHanCartoonEntity entity);
     }
 }

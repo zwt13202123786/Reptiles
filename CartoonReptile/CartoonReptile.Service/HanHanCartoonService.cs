@@ -354,42 +354,82 @@ namespace CartoonReptile.Service
                 updateEntityList.ForEach(cartoon =>
                 {
                     var cartoonEntity = oldUpdateCartoonEntityList.FirstOrDefault(x => x.CartoonName == cartoon.Cartoon.CartoonName);
-                    if (cartoonEntity == null)
+                    var cartoonReponseEntity = response.FirstOrDefault(x => x.Name == cartoon.Cartoon.CartoonName);
+                    if (cartoonEntity == null || cartoonReponseEntity == null)
                     {
                         Log(1, (int)MsgTypeEnum.ExceptionMsg, $"更新漫画异常，漫画不存在！漫画名：{cartoon.Cartoon.CartoonName}");
                         return;
                     }
-                    //更新漫画信息
-
-                    //添加漫画章节信息
+                    //获取漫画章节信息
                     cartoon.ChapterList.ForEach(Chapter =>
                     {
                         var ChapterEntity = oldChapterEntitieList.FirstOrDefault(x => x.HanHanCartoonId == cartoonEntity.Id && x.ChapterName == Chapter.Chapter.ChapterName);
-                        if(ChapterEntity==null)
+                        //获取番剧所有漫画图片
+                        if (ChapterEntity == null)
                         {
                             Chapter.PieceList.ForEach(piece =>
                             {
-
+                                var url = cartoonReponseEntity.ChapterList.FirstOrDefault(x => x.ChapterName == Chapter.Chapter.ChapterName && x.PieceName == piece.Piece.PieceName).Url;
+                                piece.PieceImgList = GetPieceImg(url).Select(x => new HanHanCartoonPieceImgEntity()
+                                {
+                                    ImgHost = x.ImgHost,
+                                    LocalhostImgUrl = "",
+                                    Sort = x.Sort,
+                                    WebImgUrl = x.ImgUrl,
+                                    WebPageUrl = x.WebSiteUrl
+                                }).ToList();
                             });
-                        };
-                        Chapter.PieceList.ForEach(piece =>
+                        }
+                        else//更新番剧
                         {
-                        });
+                            var oldNameList = oldPieceEntitieList.Where(x => x.HanHanCartoonChapterId == ChapterEntity.Id).Select(x => x.PieceName).ToList();
+                            var insertNameList = Chapter.PieceList.Select(x => x.Piece).Select(x => x.PieceName).Except(oldNameList);
+                            var insertPieceList = Chapter.PieceList.Where(x => insertNameList.Contains(x.Piece.PieceName)).ToList();
+
+                            var maxSort = oldPieceEntitieList.Max(x => x.Sort);
+                            foreach (var piece in insertPieceList)
+                            {
+                                var url = cartoonReponseEntity.ChapterList.FirstOrDefault(x => x.ChapterName == Chapter.Chapter.ChapterName && x.PieceName == piece.Piece.PieceName).Url;
+                                maxSort++;
+                                piece.Piece.Sort = maxSort;
+                                piece.PieceImgList = GetPieceImg(url).Select(x => new HanHanCartoonPieceImgEntity()
+                                {
+                                    ImgHost = x.ImgHost,
+                                    LocalhostImgUrl = "",
+                                    Sort = x.Sort,
+                                    WebImgUrl = x.ImgUrl,
+                                    WebPageUrl = x.WebSiteUrl
+                                }).ToList();
+                            }
+                            Chapter.PieceList = insertPieceList;
+                        }
                     });
-                    var chapterNameList = oldChapterEntitieList.Where(x => x.HanHanCartoonId == cartoonEntity.Id).Select(x => x.).ToList();
-                    var
-
-                    var chapterList = chapterEntitieList.Where(x => x.HanHanCartoonId == cartoon.)
-
-
-                });
-
-
-                Tran(DbEnum.HanHanCartoonDB, (dbContext) =>
-                {
-                    updateList.ForEach(x =>
+                    //更新数据
+                    Tran(DbEnum.HanHanCartoonDB, (dbContext) =>
                     {
-
+                        var cartoonTranDao = dbContext.HanHanCartoonDao;
+                        var chapterTranDao = dbContext.HanHanCartoonChapterDao;
+                        var pieceTranDao = dbContext.HanHanCartoonPieceDao;
+                        var imgTranDao = dbContext.HanHanCartoonPieceImgDao;
+                        cartoonTranDao.Update(cartoon.Cartoon);
+                        cartoon.ChapterList.ForEach(chapter =>
+                        {
+                            var chapterEntity = chapter.Chapter;
+                            chapterEntity.HanHanCartoonId = cartoonEntity.Id;
+                            chapterEntity = chapterTranDao.Insert(chapterEntity);
+                            chapter.PieceList.ForEach(piece =>
+                            {
+                                var pieceEntity = piece.Piece;
+                                pieceEntity.HanHanCartoonId = cartoonEntity.Id;
+                                pieceEntity.HanHanCartoonChapterId = chapterEntity.Id;
+                                pieceEntity = pieceTranDao.Insert(pieceEntity);
+                                piece.PieceImgList.ForEach(img =>
+                                {
+                                    img.HanHanCartoonPieceId = pieceEntity.Id;
+                                });
+                                imgTranDao.Insert(piece.PieceImgList);
+                            });
+                        });
                     });
                 });
             }
@@ -481,15 +521,13 @@ namespace CartoonReptile.Service
 
         public List<HanHanCartoonPieceImgEntity> ConvertToPieceEntity(string url)
         {
-
-             ImgPieceList.Select(x => new HanHanCartoonPieceImgEntity()
+            return GetPieceImg(url).Select(x => new HanHanCartoonPieceImgEntity()
             {
-                ImgHost = imgHost,
+                ImgHost = x.ImgHost,
                 LocalhostImgUrl = "",
                 Sort = x.Sort,
                 WebImgUrl = x.ImgUrl,
                 WebPageUrl = x.WebSiteUrl
-
             }).ToList();
         }
 
