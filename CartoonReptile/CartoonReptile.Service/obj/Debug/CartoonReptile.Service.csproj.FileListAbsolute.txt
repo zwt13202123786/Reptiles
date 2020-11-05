@@ -1,0 +1,16 @@
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Service.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Service.pdb
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Common.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Dao.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Model.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\HtmlAgilityPack.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\SqlSugar.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\Newtonsoft.Json.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Common.pdb
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Dao.pdb
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\bin\Debug\CartoonReptile.Model.pdb
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\obj\Debug\CartoonReptile.Service.csprojAssemblyReference.cache
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\obj\Debug\CartoonReptile.Service.csproj.CoreCompileInputs.cache
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\obj\Debug\CartoonReptile.Service.csproj.CopyComplete
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\obj\Debug\CartoonReptile.Service.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.Service\obj\Debug\CartoonReptile.Service.pdb

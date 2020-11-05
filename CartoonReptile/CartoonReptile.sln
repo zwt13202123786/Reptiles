@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanHanReptile", "HanHanReptile\HanHanReptile.csproj", "{2F787D9B-A929-495B-A46C-FDD7000976A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{3ABFCB6D-9F5E-454D-9EE0-8C1D79E8F837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{C557BF37-A1A9-4AC9-B743-88128ED48B70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D2BECB3F-2B9A-44D6-9019-5B0A350EEB87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dao", "Dao", "{F122419A-97DC-43C2-836D-9FD31DC6F61E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{0DF0D7EA-A4FF-4FE7-9EE9-206FD2257638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{59152719-0FD7-4674-9D30-F5B272A7F66A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{221D46F1-EE5E-4801-A287-CE38C2EF362F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonReptile.Dao", "CartoonReptile.Dao\CartoonReptile.Dao.csproj", "{D4A6AFD2-73F2-48F2-9202-43EA54F28473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonReptile.Model", "CartoonReptile.Model\CartoonReptile.Model.csproj", "{70C17745-D332-4A64-A53C-201154399B40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonReptile.Service", "CartoonReptile.Service\CartoonReptile.Service.csproj", "{5B6D5F16-F67A-4566-B5F8-3F36A2556720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonReptile.SDK", "CartoonReptile.SDK\CartoonReptile.SDK.csproj", "{A3258B3A-78C9-4B91-8A97-DCD4F33467D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonReptile.Common", "CartoonReptile.Common\CartoonReptile.Common.csproj", "{8424A3F2-4BF5-458C-AC19-0A158EE48AE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F787D9B-A929-495B-A46C-FDD7000976A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F787D9B-A929-495B-A46C-FDD7000976A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F787D9B-A929-495B-A46C-FDD7000976A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F787D9B-A929-495B-A46C-FDD7000976A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221D46F1-EE5E-4801-A287-CE38C2EF362F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221D46F1-EE5E-4801-A287-CE38C2EF362F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221D46F1-EE5E-4801-A287-CE38C2EF362F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221D46F1-EE5E-4801-A287-CE38C2EF362F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A6AFD2-73F2-48F2-9202-43EA54F28473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A6AFD2-73F2-48F2-9202-43EA54F28473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A6AFD2-73F2-48F2-9202-43EA54F28473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A6AFD2-73F2-48F2-9202-43EA54F28473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C17745-D332-4A64-A53C-201154399B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C17745-D332-4A64-A53C-201154399B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C17745-D332-4A64-A53C-201154399B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C17745-D332-4A64-A53C-201154399B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6D5F16-F67A-4566-B5F8-3F36A2556720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6D5F16-F67A-4566-B5F8-3F36A2556720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6D5F16-F67A-4566-B5F8-3F36A2556720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6D5F16-F67A-4566-B5F8-3F36A2556720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3258B3A-78C9-4B91-8A97-DCD4F33467D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3258B3A-78C9-4B91-8A97-DCD4F33467D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3258B3A-78C9-4B91-8A97-DCD4F33467D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3258B3A-78C9-4B91-8A97-DCD4F33467D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8424A3F2-4BF5-458C-AC19-0A158EE48AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8424A3F2-4BF5-458C-AC19-0A158EE48AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8424A3F2-4BF5-458C-AC19-0A158EE48AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8424A3F2-4BF5-458C-AC19-0A158EE48AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{221D46F1-EE5E-4801-A287-CE38C2EF362F} = {59152719-0FD7-4674-9D30-F5B272A7F66A}
+		{D4A6AFD2-73F2-48F2-9202-43EA54F28473} = {F122419A-97DC-43C2-836D-9FD31DC6F61E}
+		{70C17745-D332-4A64-A53C-201154399B40} = {3ABFCB6D-9F5E-454D-9EE0-8C1D79E8F837}
+		{5B6D5F16-F67A-4566-B5F8-3F36A2556720} = {0DF0D7EA-A4FF-4FE7-9EE9-206FD2257638}
+		{A3258B3A-78C9-4B91-8A97-DCD4F33467D4} = {C557BF37-A1A9-4AC9-B743-88128ED48B70}
+		{8424A3F2-4BF5-458C-AC19-0A158EE48AE1} = {D2BECB3F-2B9A-44D6-9019-5B0A350EEB87}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3B3ECA1-5994-4EFD-9B2E-E4890E5F9509}
+	EndGlobalSection
+EndGlobal

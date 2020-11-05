@@ -1,0 +1,6 @@
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\bin\Debug\CartoonReptile.SDK.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\bin\Debug\CartoonReptile.SDK.pdb
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\obj\Debug\CartoonReptile.SDK.csprojAssemblyReference.cache
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\obj\Debug\CartoonReptile.SDK.csproj.CoreCompileInputs.cache
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\obj\Debug\CartoonReptile.SDK.dll
+D:\漫画网站爬虫\CartoonReptile\CartoonReptile.SDK\obj\Debug\CartoonReptile.SDK.pdb
